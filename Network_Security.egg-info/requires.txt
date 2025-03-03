@@ -6,3 +6,5 @@ certifi
 pymongo[srv]==3.6
 pymango
 scikit-learn
+dill
+pyaml
