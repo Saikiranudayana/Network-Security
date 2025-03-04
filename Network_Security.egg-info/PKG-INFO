@@ -11,6 +11,7 @@ Requires-Dist: certifi
 Requires-Dist: pymongo[srv]==3.6
 Requires-Dist: pymango
 Requires-Dist: scikit-learn
+Requires-Dist: mlflow
 Requires-Dist: dill
 Requires-Dist: pyaml
 Dynamic: author
