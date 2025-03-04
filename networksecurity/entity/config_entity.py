@@ -92,3 +92,26 @@ class DataTransformationConfig:
             training_pipeline.DATA_TRANSFORMATION_OBJECT_DIR,
             training_pipeline.PREPROCESSING_OBJECT_FILE_NAME,
         )
+
+class ModelTrainerConfig:
+    def __init__(self, training_pipeline_config: TrainingPipelineConfig):
+        # Directory where model trainer artifacts will be stored
+        self.model_trainer_dir: str = os.path.join(
+            training_pipeline_config.artifact_dir,
+            training_pipeline.MODEL_TRAINER_DIR_NAME
+        )
+
+        # Path for saving the trained model file
+        self.trained_model_file_path: str = os.path.join(
+            self.model_trainer_dir,
+            training_pipeline.MODEL_TRAINER_TRAINED_MODEL_DIR,
+            training_pipeline.MODEL_FILE_NAME
+        )
+
+        # Expected accuracy (or score) threshold for the trained model
+        self.expected_accuracy: float = training_pipeline.MODEL_TRAINER_EXPECTED_SCORE
+
+        # Overfitting/underfitting threshold for model performance
+        self.overfitting_underfitting_threshold: float = (
+            training_pipeline.MODEL_TRAINER_OVER_FITTING_UNDER_FITTING_THRESHOLD
+        )
