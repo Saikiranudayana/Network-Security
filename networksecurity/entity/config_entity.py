@@ -38,6 +38,11 @@ class DataIngestionConfig:
         
 class DataValidationConfig:
     def __int__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.training_pipeline_config=trainng_pipeline_config(
+            
+        )
+        
+        
         self.data_validation_dir:str = os.path.join(
             training_pipeline_config.artifacts_dir,training_pipeline.DATA_VALIDATION_DIR_NAME
         )

@@ -3,11 +3,13 @@ pandas
 numpy  
 pymongo
 certifi
-pymongo[srv]==3.6
+pymongo
 pymango 
 scikit-learn
 mlflow
 dill
 pyaml
+fastapi
+uvicorn
 
 -e .

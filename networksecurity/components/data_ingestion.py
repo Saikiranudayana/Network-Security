@@ -38,7 +38,7 @@ class DataIngestion:
             collection_name = self.data_ingestion_config.collection_name
             self.mongo_client = pymongo.MongoClient(MONGO_DB_URL)
             collection= self.mongo_client[database_name][collection_name]
-            df = pd.DataFrame(list(collection.find))
+            df = pd.DataFrame(list(collection.find()))
             if "_id" in df.columns.to_list():
                 df = df.drop(columns=["_id"],axis=1)
                 
@@ -51,7 +51,7 @@ class DataIngestion:
         try:
             feature_store_file_path = self.data_ingestion_config.feature_store_dir
             ##creating folder 
-            dir_path = os.patyh.dirname(feature_store_file_path)
+            dir_path = os.path.dirname(feature_store_file_path)
             os.makedirs(dir_path,exist_ok=True)
             dataframe.to_csv(feature_store_file_path,index=False,header=True)
             return dataframe

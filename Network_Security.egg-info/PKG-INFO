@@ -8,12 +8,14 @@ Requires-Dist: pandas
 Requires-Dist: numpy
 Requires-Dist: pymongo
 Requires-Dist: certifi
-Requires-Dist: pymongo[srv]==3.6
+Requires-Dist: pymongo
 Requires-Dist: pymango
 Requires-Dist: scikit-learn
 Requires-Dist: mlflow
 Requires-Dist: dill
 Requires-Dist: pyaml
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
 Dynamic: author
 Dynamic: author-email
 Dynamic: requires-dist
