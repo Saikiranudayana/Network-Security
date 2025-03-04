@@ -16,8 +16,9 @@ FILE_NAME:str = "NetworkData.csv"
 TRAIN_FILE_NAME:str = "train.csv"
 TEST_FILE_NAME:str = "test.csv"
 
-SCHEMA_FILE_NAME:str = os.path.join("data_scheme","schema.yaml")
+SCHEMA_FILE_NAME:str= os.path.join("data_scheme","schema.yaml")
 
+SCHEMA_FILE_NAME = SCHEMA_FILE_NAME
 """"
 Data Ingestion related constant start with DATA_INGESTION VAR NAME
 """  

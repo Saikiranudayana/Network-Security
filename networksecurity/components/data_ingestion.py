@@ -47,7 +47,7 @@ class DataIngestion:
         except Exception as e: 
             raise NetworkSecuirtyException
         
-    def export_dat_into_feature_store(self,dataframe:pd.Dataframe):
+    def export_dat_into_feature_store(self,dataframe:pd.DataFrame):
         try:
             feature_store_file_path = self.data_ingestion_config.feature_store_dir
             ##creating folder 
